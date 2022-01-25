@@ -1,2 +1,2 @@
-# book-spine-calculator
-Calculates width of spine of a book
+# Book Spine Calculator
+Calculates width of spine of a book.
