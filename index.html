@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr" >
+<head>
+    <meta charset="UTF-8">
+    <title>Kitap Sırt Kalınlığı Hesaplama</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="normalize.min.css">
+    <link rel="stylesheet" href="style.css?v=1.5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64964814-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-64964814-1');
+	</script>
+
+</head>
+<body>
+<div id="calculator">
+	<div class="container">
+		<form action="">
+			<h1>Sırt Kalınlığı Hesaplama</h1>
+			<p>(Kağıt Tipine Göre)</p>
+			<br/>
+			<label for="paper">Kağıt Tipi</label>
+			<select name="paper" v-model="paper">
+				<option value="0.060" selected>Enzo 60 gr.</option>
+				<option value="0.055">Enzo 55 gr.</option>
+				<option value="0.046">1. Hamur 70 gr.</option>
+				<option value="0.052">1. Hamur 80 gr.</option>
+			</select>
+			
+			<label for="pages">Sayfa Sayısı</label>
+			<input type="number" name="pages" v-model.number="pages" placeholder="0"/>
+		</form>
+		<div class="result">{{ calcSize }} mm</div>
+		<div style="width:100%; text-align: center;">Tasarımınızda kullanacağınız sırt ölçüsüdür</div>
+		<div class="iltekin">
+			Bu hesaplama aracı <a href="https://iltekin.com/about">Sezer İltekin</a> tarafından<br/> Türkiye'de kullanılan kağıt ebatları baz alınarak tasarlanmıştır.
+		</div>
+	</div>
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+  <script  src="script.js?v=1.5"></script>
+
+</body>
+</html>
